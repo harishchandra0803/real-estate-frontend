@@ -1,3 +1,7 @@
+
+
+
+
 import { useState } from 'react';
 import {
   getDownloadURL,
@@ -132,7 +136,7 @@ export default function CreateListing() {
         return setError('Discount price must be lower than regular price');
       setLoading(true);
       setError(false);
-      const res = await fetch('/api/listing/create', {
+      const res = await fetch('https://real-estate-backend-ycua.onrender.com/api/listing/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -147,7 +151,8 @@ export default function CreateListing() {
       if (data.success === false) {
         setError(data.message);
       }
-      navigate(`/listing/${data._id}`);
+      navigate(`/listing/${data
+                        ._id}`);
     } catch (error) {
       setError(error.message);
       setLoading(false);
