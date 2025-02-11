@@ -53,7 +53,7 @@ export default function Search() {
     const fetchListings = async () => {
       setLoading(true);
       const searchQuery = urlParams.toString(); //response based on new url -> converted to string 
-      const res = await fetch(`/api/listing/get?${searchQuery}`); //getListings from search api route 
+      const res = await fetch(`https://real-estate-backend-ycua.onrender.com/api/listing/get?${searchQuery}`); //getListings from search api route 
       const data = await res.json();
       if (data.length > 8) {
         setShowMore(true);
@@ -122,7 +122,7 @@ export default function Search() {
     const urlParams = new URLSearchParams(location.search);
     urlParams.set('startIndex', startIndex);
     const searchQuery = urlParams.toString();
-    const res = await fetch(`/api/listing/get?${searchQuery}`);
+    const res = await fetch(`https://real-estate-backend-ycua.onrender.com/api/listing/get?${searchQuery}`);
     const data = await res.json();
     if (data.length < 9) {
       setShowMore(false);
