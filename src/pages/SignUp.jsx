@@ -19,7 +19,7 @@ export default function SignUp() {
     try {
       console.log(formData)
       setLoading(true);
-      const res = await fetch('/api/auth/signup', {
+      const res = await fetch('https://real-estate-backend-ycua.onrender.com/api/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
