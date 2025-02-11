@@ -18,7 +18,7 @@ export default function Home() {
     const fetchOfferListings = async () => {
       try {
         //only 4 listings are shown 
-        const res = await fetch('/api/listing/get?offer=true&limit=4');
+        const res = await fetch('https://real-estate-backend-ycua.onrender.com/api/listing/get?offer=true&limit=4');
         const data = await res.json();
         setOfferListings(data);
         fetchRentListings();
@@ -29,7 +29,7 @@ export default function Home() {
     //rent loaded after offer gets loaded 
     const fetchRentListings = async () => {
       try {
-        const res = await fetch('/api/listing/get?type=rent&limit=4');
+        const res = await fetch('https://real-estate-backend-ycua.onrender.com/api/listing/get?type=rent&limit=4');
         const data = await res.json();
         setRentListings(data);
         fetchSaleListings();
@@ -40,7 +40,7 @@ export default function Home() {
     //sale loaded after rent gets loaded 
     const fetchSaleListings = async () => {
       try {
-        const res = await fetch('/api/listing/get?type=sale&limit=4');
+        const res = await fetch('https://real-estate-backend-ycua.onrender.com/api/listing/get?type=sale&limit=4');
         const data = await res.json();
         setSaleListings(data);
       } catch (error) {
