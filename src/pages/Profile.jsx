@@ -66,8 +66,8 @@ const handleSubmit = async (e) => {
     dispatch(updateUserStart()); //loading effect started
     const res = await fetch(`https://real-estate-backend-ycua.onrender.com/api/user/update/${currentUser._id}`, {
       method: 'POST',
-      credentials: 'include',
-        withCredntials: true,
+      // credentials: 'include',
+      //   withCredntials: true,
       
       headers: {
         'Content-Type': 'application/json',
@@ -142,8 +142,8 @@ const handleListingDelete = async (listingId) => {
   try {
     const res = await fetch(`https://real-estate-backend-ycua.onrender.com/api/listing/delete/${listingId}`, {
       method: 'DELETE',
-      credentials: 'include',
-        withCredntials: true,
+      // credentials: 'include',
+      //   withCredntials: true,
     });
     const data = await res.json();
     if (data.success === false) {
