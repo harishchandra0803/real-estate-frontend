@@ -138,6 +138,8 @@ export default function CreateListing() {
       setError(false);
       const res = await fetch('https://real-estate-backend-ycua.onrender.com/api/listing/create', {
         method: 'POST',
+        credentials: 'include',
+        withCredntials: true,
         headers: {
           'Content-Type': 'application/json',
         },
