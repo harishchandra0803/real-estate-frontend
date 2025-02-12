@@ -89,6 +89,7 @@ const handleDeleteUser = async () => {
     dispatch(deleteUserStart());
     const res = await fetch(`https://real-estate-backend-ycua.onrender.com/api/user/delete/${currentUser._id}`, {
       method: 'DELETE',
+      withCredntials: true,
       credentials: 'include',
     });
     const data = await res.json();
