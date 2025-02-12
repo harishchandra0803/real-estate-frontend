@@ -150,8 +150,8 @@ export default function CreateListing() {
       setError(false);
       const res = await fetch(`/api/listing/update/${params.listingId}`, {
         method: 'POST',
-        credentials: 'include',
-        withCredntials: true,
+        // credentials: 'include',
+        // withCredntials: true,
         headers: {
           'Content-Type': 'application/json',
         },
