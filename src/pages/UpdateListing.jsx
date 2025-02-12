@@ -62,7 +62,7 @@ export default function CreateListing() {
           setFormData({
             ...formData,
             imageUrls: formData.imageUrls.concat(urls),
-          
+            });
           setImageUploadError(false);
           setUploading(false);
         })
