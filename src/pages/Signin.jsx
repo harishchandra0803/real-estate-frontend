@@ -23,7 +23,7 @@ export default function Signin() {
       const res = await fetch('https://real-estate-backend-ycua.onrender.com/api/auth/signin', {
         method: 'POST',
         credentials: 'include',
-        withCredntials: true
+        withCredntials: true,
         headers: {
           'Content-Type': 'application/json',
         },
